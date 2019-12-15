@@ -15,18 +15,18 @@ namespace Hotel.Data.Repositories
 
         public override IEnumerable<Domain.Entites.Hotel> GetAll()
         {
-            return  _context.AnuncioWebmotors
+            return  _context.Hoteis
                     .Where(q => q.DeleteDate == null).ToList();
         }
         public override Domain.Entites.Hotel GetById(int id)
         {
-            return  _context.AnuncioWebmotors
+            return  _context.Hoteis
                     .Where(q => q.DeleteDate == null && q.Id == id).FirstOrDefault();
         }
 
         public bool IsHotelExists(int id)
         {
-            return  _context.AnuncioWebmotors
+            return  _context.Hoteis
                     .Where(q => q.DeleteDate == null && q.Id == id).Any();
         }
     }

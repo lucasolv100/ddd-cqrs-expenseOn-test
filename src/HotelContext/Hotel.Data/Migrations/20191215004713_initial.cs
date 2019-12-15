@@ -9,7 +9,7 @@ namespace Hotel.Data.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "AnuncioWebmotors",
+                name: "Hoteis",
                 columns: table => new
                 {
                     Id = table.Column<int>(nullable: false)
@@ -29,14 +29,14 @@ namespace Hotel.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_AnuncioWebmotors", x => x.Id);
+                    table.PrimaryKey("PK_Hoteis", x => x.Id);
                 });
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
-                name: "AnuncioWebmotors");
+                name: "Hoteis");
         }
     }
 }

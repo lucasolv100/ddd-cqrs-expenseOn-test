@@ -6,7 +6,7 @@ namespace Hotel.Data
     public class HotelContext : DbContext
     {
 
-        public DbSet<Domain.Entites.Hotel> AnuncioWebmotors { get; set; }
+        public DbSet<Domain.Entites.Hotel> Hoteis { get; set; }
         public HotelContext(DbContextOptions<HotelContext> options) : base(options)
         {
 

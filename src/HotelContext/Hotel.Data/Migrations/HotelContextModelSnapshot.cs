@@ -56,7 +56,7 @@ namespace Hotel.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("AnuncioWebmotors");
+                    b.ToTable("Hoteis");
                 });
 
             modelBuilder.Entity("Hotel.Domain.Entites.Hotel", b =>
@@ -94,7 +94,7 @@ namespace Hotel.Data.Migrations
 
                             b1.HasKey("HotelId");
 
-                            b1.ToTable("AnuncioWebmotors");
+                            b1.ToTable("Hoteis");
 
                             b1.HasOne("Hotel.Domain.Entites.Hotel")
                                 .WithOne("Address")
