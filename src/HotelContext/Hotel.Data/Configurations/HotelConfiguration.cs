@@ -19,7 +19,7 @@ namespace Hotel.Data.Configurations
             builder.Property(p => p.Description).HasMaxLength(255).IsRequired().HasColumnName("Descricao");
             builder.Property(p => p.Rating).HasColumnType("decimal(10,2)").IsRequired().HasColumnName("Avaliacao");
             builder.Property(p => p.Features).HasMaxLength(500).IsRequired().HasColumnName("Comodidades");
-            
+
             builder.OwnsOne(p => p.Address, a =>
             {
                 a.Property(c => c.Street).HasMaxLength(50).IsRequired().HasColumnName("Rua");
@@ -27,8 +27,11 @@ namespace Hotel.Data.Configurations
                 a.Property(c => c.Number).HasMaxLength(9).IsRequired().HasColumnName("Numero");
                 a.Property(c => c.City).HasMaxLength(100).IsRequired().HasColumnName("Cidade");
                 a.Property(c => c.State).HasMaxLength(50).IsRequired().HasColumnName("Estado");
+                a.Ignore(i => i.Notifications);
+                a.Ignore(i => i.Invalid);
+                a.Ignore(i => i.Valid);
             });
-            
+
 
             builder.Property(p => p.CreateDate).HasColumnName("DataCriacao");
             builder.Property(p => p.EditDate).HasColumnName("DataEdicao");
