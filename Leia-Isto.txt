@@ -1,0 +1,12 @@
+Esse projeto é um canhão para matar uma formiga, sou ciente disso, porém é necessário para demonstração da qualidade técnica que tenho utilizando uma aborgadem de desenvolvimento mais nova com um pattern integrado.
+
+O projeto foi feito em .net core 2.2 então é necessário instalar o SDK para poder rodar o projeto;
+
+Existe uma configuração de scripts utilizando o yarn na raiz do projeto, vale a pena ver para utilizar o yarn para subir o projeto e uma base local;
+
+A arquitetura escolhida foi a DDD para demonstração da abordagem com o pattern CQRS para exmplificação de consultas separadas de comandos.
+
+O Front até esse momento estou pensando em fazer em react, mas não sei se irei conseguir, pois amanhã vou trabalhar e esse CRUD com integração foi um pouquinho verboso.. rs, apesar que eu tinha muita coisa pré pronta do meu github.
+
+POSTMAN - https://www.getpostman.com/collections/39a2c95eabaaa0e485d2
+PROJETO - https://github.com/lucasolv100/ddd-cqrs-announcement-test

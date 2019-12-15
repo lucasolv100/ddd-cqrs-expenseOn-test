@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "jquery-ajax-unobtrusive": "^3.2.6",
+    "jquery-validate": "^2.0.0",
+    "jquery-validation-unobtrusive": "^3.2.11"
+  },
+  "scripts":{
+    "start": "dotnet run -p .\\Hotel.API\\Hotel.API.csproj",
+    "publish-project": "dotnet publish .\\Hotel.API\\Hotel.API.csproj -o ..\\..\\publish",
+    "migration": "cd .\\Hotel.Data && dotnet ef --startup-project ..\\Hotel.API\\Hotel.API.csproj --project .\\Hotel.Data.csproj migrations add",
+    "migration-script": "cd .\\Hotel.Data && dotnet ef --startup-project ..\\Hotel.API\\Hotel.API.csproj --project .\\Hotel.Data.csproj migrations script",
+    "migration-remove": "cd .\\Hotel.Data && dotnet ef --startup-project ..\\Hotel.API\\Hotel.API.csproj --project .\\Hotel.Data.csproj migrations remove",
+    "database-update": "cd .\\Hotel.Data && dotnet ef --startup-project ..\\Hotel.API\\Hotel.API.csproj --project .\\Hotel.Data.csproj database update"
+  }
+}
