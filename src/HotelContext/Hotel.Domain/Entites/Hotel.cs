@@ -15,6 +15,9 @@ namespace Hotel.Domain.Entites
             Rating = rating;
             Address = address;
             Features = features;
+            CreateDate = DateTime.Now;
+
+            Validations();
         }
 
         private Hotel() { }

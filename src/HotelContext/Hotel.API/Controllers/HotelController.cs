@@ -22,7 +22,7 @@ namespace Hotel.API.Controllers
         }
         // GET api/values
         [HttpGet]
-        [Route("Hotel")]
+        [Route("hotel")]
         public ActionResult<IEnumerable<GetHotelVM>> GetHotels()
         {
             var query = _repository.GetAll();
@@ -51,7 +51,7 @@ namespace Hotel.API.Controllers
 
         // GET api/values/5
         [HttpGet("{id}")]
-        [Route("Hotel/{id}")]
+        [Route("hotel/{id}")]
         public ActionResult<GetHotelVM> Get(int id)
         {
             var query = _repository.GetById(id);
@@ -81,7 +81,7 @@ namespace Hotel.API.Controllers
 
         // POST api/values
         [HttpPost]
-        [Route("Hotel")]
+        [Route("hotel")]
         public ActionResult Post([FromBody] RegisterHotelVM model)
         {
             var handler = new HotelCommandHandler(_repository);
@@ -124,7 +124,7 @@ namespace Hotel.API.Controllers
 
         // PUT api/values/5
         [HttpPut]
-        [Route("Hotel/{id}")]
+        [Route("hotel/{id}")]
         public ActionResult Put(int id, [FromBody] RegisterHotelVM model)
         {
             var handler = new HotelCommandHandler(_repository);
@@ -168,7 +168,7 @@ namespace Hotel.API.Controllers
 
         // DELETE api/values/5
         [HttpDelete]
-        [Route("Hotel/{id}")]
+        [Route("hotel/{id}")]
         public ActionResult Delete(int id)
         {
             var handler = new HotelCommandHandler(_repository);
