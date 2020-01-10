@@ -10,11 +10,8 @@ export default class Hotel extends Component {
   constructor(props) {
     super(props);
 
-    this.handleAdd = this.handleAdd.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleRemove = this.handleRemove.bind(this);
-    this.handleMarkAsDone = this.handleMarkAsDone.bind(this);
-    this.handleMarkAsPending = this.handleMarkAsPending.bind(this);
     this.handleSearch = this.handleSearch.bind(this);
     this.handleClear = this.handleClear.bind(this);
 
@@ -31,28 +28,13 @@ export default class Hotel extends Component {
       );
   }
 
-  handleAdd() {
-    // const description = this.state.description
-    // axios.post(URL, {description})
-    // .then(resp => this.refresh())
-  }
-
   handleChange(e) {
     this.setState({ ...this.state, description: e.target.value });
   }
 
   handleRemove(Hotel) {
-    // axios.delete(`${URL}/${Hotel._id}`)
-    // .then(resp => this.refresh(this.state.description))
-  }
-  handleMarkAsDone(Hotel) {
-    axios
-      .put(`${URL}/${Hotel._id}`, { ...Hotel, done: true })
-      .then(resp => this.refresh(this.state.description));
-  }
-  handleMarkAsPending(Hotel) {
-    // axios.put(`${URL}/${Hotel._id}`, {...Hotel, done:false})
-    // .then(resp => this.refresh(this.state.description))
+    axios.delete(`${URL}/${Hotel.id}`)
+    .then(resp => this.refresh())
   }
   handleSearch() {
     // this.refresh(this.state.description)
@@ -63,7 +45,7 @@ export default class Hotel extends Component {
 
   render() {
     return (
-      <div>
+      <div className="mt-3">
         <PageHeader name="Lista" small="Hoteis" />
         <HotelForm
           description={this.state.description}
@@ -75,8 +57,7 @@ export default class Hotel extends Component {
         <HotelList
           list={this.state.list}
           handleRemove={this.handleRemove}
-          handleMarkAsDone={this.handleMarkAsDone}
-          handleMarkAsPending={this.handleMarkAsPending}
+          handleEdit={this.handleEdit}
         />
       </div>
     );

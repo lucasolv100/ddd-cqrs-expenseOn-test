@@ -1,5 +1,6 @@
 import React from "react";
 import IconButton from "../template/iconButton";
+import IconHref from "../template/iconHref";
 
 export default props => {
   const renderRows = () => {
@@ -8,11 +9,11 @@ export default props => {
       <tr className="col-md-12" key={hotel.id}>
         <td className="col-md-8">{hotel.name}</td>
         <td className="col-md-2">
-          <IconButton
+          <IconHref
             style="success"
             icon="edit"
             hide={false}
-            onClick={() => props.handleEdit(hotel)}
+            onClick={"#/registro/hotel/" + hotel.id}
           />
         </td>
         <td className="col-md-2">
