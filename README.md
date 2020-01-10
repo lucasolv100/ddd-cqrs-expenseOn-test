@@ -15,7 +15,7 @@ POSTMAN para testes: https://www.getpostman.com/collections/3a3fb1e975fb2f9c49f8
 5 - Após o comando executado, rodar o seguinte comando para subir o front-end local: 
 > npm start
 
-6 - Após o front-end up subir a API em "src > HotelContext > Hotel.API" execute o seguinte comando:
+6 - Após o front-end up, subir a API em "src > HotelContext > Hotel.API" execute o seguinte comando:
 > dotnet run
 
 7 - Com o back-end up é só executar os testes via front-end (leia o sobre).
