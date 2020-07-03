@@ -1,6 +1,7 @@
 # ddd-cqrs-expenseOn-test
 
 1 - Acertar a connection string no appsettings para um banco de dados SQL Server local;
+
 2 - Rodar o comando Update-Database para atualização da base de dados via package manager console no visual studio ou rodar o seguinte comando: 
 > cd .\Hotel.Data && dotnet ef --startup-project ..\Hotel.API\Hotel.API.csproj --project .\Hotel.Data.csproj database update
 
